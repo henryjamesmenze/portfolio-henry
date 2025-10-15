@@ -35,8 +35,8 @@ const Navbar = () => {
           ))}
           <li className="mt-2 md:mt-0">
             <a
-              href="../HJ Henry Zepeda.pdf"
-              download='../HJ Henry Zepeda.pdf'
+              href="/_HJ_HenryZepeda.pdf"
+              download='/_HJ_HenryZepeda.pdf'
               className="bg-purple-500 text-black px-3 py-1 rounded hover:bg-purple-300 transition block text-center"
             >
               Descargar CV
