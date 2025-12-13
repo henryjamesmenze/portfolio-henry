@@ -1,5 +1,3 @@
-import { FaAws } from "react-icons/fa";
-
 import {
   SiTypescript,
   SiJavascript,
@@ -7,7 +5,6 @@ import {
   SiNodedotjs,
   SiTailwindcss,
   SiSass,
-  SiDocker,
   SiGit,
   SiMysql,
   SiBootstrap,
@@ -21,12 +18,10 @@ const skills = [
   { name: "Node.js", icon: <SiNodedotjs size={40} /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={40} /> },
   { name: "SASS/SCSS", icon: <SiSass size={40} /> },
-  { name: "Docker", icon: <SiDocker size={40} /> },
   { name: "Git", icon: <SiGit size={40} /> },
   { name: "MySQL", icon: <SiMysql size={40} /> },
   { name: "Bootstrap", icon: <SiBootstrap size={40} /> },
   { name: "Bash", icon: <SiGnubash size={40} /> },
-  { name: "AWS", icon: <FaAws size={40} /> },
 ];
 
 const Skills = () => {

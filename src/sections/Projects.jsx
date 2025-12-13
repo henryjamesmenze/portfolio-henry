@@ -1,10 +1,10 @@
 const projects = [
   {
-    title: "Sistema de alquiler de vehículos",
-    description: "Desarrollo de un software para el alquiler de vehículos en la ciudad de Cartagena",
-    tech: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
-    demo: "#",
-    repo: "#",
+    title: "Calculadora de relaciones de recurrencias lineales",
+    description: "Desarrollo de una calculadora para resolver ejercicios de recurrencias lineales homogeneas de segundo orden",
+    tech: ["React", "JavaScript", "Tailwind CSS"],
+    demo: "https://recurrenciascalc.netlify.app/",
+    repo: "https://github.com/henryjamesmenze/calculadora.git",
   },
   {
     title: "RutiApp Web",
@@ -14,11 +14,11 @@ const projects = [
     repo: "#",
   },
   {
-    title: "Sistema de inventario",
-    description: "Desarrollo de un software para la detección y clasificación de productos",
-    tech: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
-    demo: "#",
-    repo: "#",
+    title: "Generador de graficos basado en datos CSV",
+    description: "Generador de gráficos dinámicos a partir de archivos CSV cargados por el usuario",
+    tech: ["React", "JavaScript", "Tailwind CSS"],
+    demo: "https://getgraph.netlify.app/",
+    repo: "https://github.com/henryjamesmenze/projectSemillero.git",
   }
 ];
 
@@ -28,7 +28,6 @@ const Projects = () => {
       id="proyectos"
       className="relative h-screen flex items-center justify-center px-4 overflow-hidden"
     >
-      {/* Video de fondo solo en desktop */}
       <video
         autoPlay
         loop
@@ -39,23 +38,14 @@ const Projects = () => {
         <source src="/videos/projectsVideo.webm" type="video/webm" />
       </video>
 
-      {/* Imagen fallback para móviles */}
       <img
         src="/projects.png"
         alt="Fondo Proyectos"
         className="absolute top-0 left-0 w-full h-full object-cover z-0 block md:hidden"
       />
-
-      {/* Overlay oscuro + blur */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10" />
-
-      {/* Difuminado superior */}
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent via-black to-black z-10" />
-
-      {/* Difuminado inferior */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent via-black to-black z-10" />
-
-      {/* Contenido Projects */}
       <div className="relative z-20 max-w-5xl mx-auto text-white">
         <h3 className="text-2xl sm:text-3xl font-semibold text-purple-500 mb-8 text-center">
           Proyectos
