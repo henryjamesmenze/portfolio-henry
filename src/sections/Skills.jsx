@@ -12,6 +12,8 @@ import {
   SiAstro,
 } from "react-icons/si";
 
+import { TbBrandReactNative } from "react-icons/tb";
+
 const skills = [
   { name: "TypeScript", icon: <SiTypescript size={40} /> },
   { name: "JavaScript", icon: <SiJavascript size={40} /> },
@@ -24,6 +26,7 @@ const skills = [
   { name: "Bootstrap", icon: <SiBootstrap size={40} /> },
   { name: "Bash", icon: <SiGnubash size={40} /> },
   { name: "Astro", icon: <SiAstro size={40} /> },
+  { name: "React Native", icon: <TbBrandReactNative size={40} /> },
 ];
 
 const Skills = () => {
