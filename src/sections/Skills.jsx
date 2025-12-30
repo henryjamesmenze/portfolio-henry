@@ -9,6 +9,7 @@ import {
   SiMysql,
   SiBootstrap,
   SiGnubash,
+  SiAstro,
 } from "react-icons/si";
 
 const skills = [
@@ -22,6 +23,7 @@ const skills = [
   { name: "MySQL", icon: <SiMysql size={40} /> },
   { name: "Bootstrap", icon: <SiBootstrap size={40} /> },
   { name: "Bash", icon: <SiGnubash size={40} /> },
+  { name: "Astro", icon: <SiAstro size={40} /> },
 ];
 
 const Skills = () => {
