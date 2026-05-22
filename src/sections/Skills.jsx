@@ -35,25 +35,41 @@ const Skills = () => {
       id="habilidades"
       className="relative min-h-screen flex items-center justify-center px-4 bg-black overflow-hidden"
     >
+      {/* Efecto de círculos animados de fondo mejorado */}
+      <div className="absolute top-1/4 -left-40 w-80 h-80 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow" />
+      <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow" />
+      <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-float" />
+
       {/* Difuminado superior */}
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent via-black to-black z-10" />
+      <div className="absolute top-0 left-0 w-full h-24 bg-black/30 z-10" />
 
       {/* Difuminado inferior */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent via-black to-black z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-black/30 z-10" />
 
       {/* Contenido Skills */}
-      <div className="relative z-20 w-full max-w-6xl mx-auto text-center py-12">
-        <h3 className="text-3xl sm:text-4xl font-semibold text-purple-500 mb-10">
+      <div className="relative z-20 w-full max-w-6xl mx-auto text-center py-16 animate-slide-in-left">
+        <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-purple-400 mb-4 animate-gradient drop-shadow-lg">
           Habilidades Técnicas
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <p className="text-gray-400 mb-16 text-lg font-semibold">Tecnologías que domino y utilizo en mis proyectos</p>
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 lg:gap-8">
           {skills.map((skill, i) => (
             <div
               key={i}
-              className="bg-black border border-purple-500 rounded-xl p-6 flex flex-col items-center justify-center gap-3 hover:bg-purple-500 hover:text-black transition text-white"
+              className="group card-hover relative"
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
-              {skill.icon}
-              <span className="text-lg font-medium">{skill.name}</span>
+              {/* Aura brillante */}
+              <div className="absolute -inset-0.5 bg-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-lg" />
+              
+              {/* Card principal con fondo degradado */}
+              <div className="relative bg-black border-2 border-purple-500/40 rounded-xl p-8 flex flex-col items-center justify-center gap-4 hover:border-purple-400 transition-all duration-300 text-white group-hover:shadow-2xl group-hover:shadow-purple-500/40 hover:-rotate-1 hover:scale-105">
+                <div className="text-5xl text-purple-400 group-hover:text-pink-400 transition-all duration-300 group-hover:scale-150 group-hover:animate-orbit">
+                  {skill.icon}
+                </div>
+                <span className="text-base sm:text-lg font-bold text-center text-purple-300 group-hover:text-purple-200 transition-all group-hover:animate-color-shift">{skill.name}</span>
+              </div>
             </div>
           ))}
         </div>

@@ -1,6 +1,389 @@
 @import 'tailwindcss';
 @tailwind utilities;
 
+/* Variables de tema - Tema Oscuro */
+:root {
+  /* Tema Oscuro Suave */
+  --bg-primary: #1a1625;
+  --bg-secondary: #2d2440;
+  --bg-tertiary: #3d3555;
+  --text-primary: #e8e3f0;
+  --text-secondary: #c4b8d1;
+  --accent-primary: #a78bfa;
+  --accent-secondary: #c084fc;
+  --border-color: rgba(167, 139, 250, 0.25);
+  --border-hover: rgba(167, 139, 250, 0.5);
+  --glow-color: rgba(167, 139, 250, 0.25);
+}
+
 body {
-  @apply bg-black text-gray-100 font-sans;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  @apply font-sans transition-all duration-300;
+}
+
+/* Animaciones mejoradas */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.6), 0 0 30px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(139, 92, 246, 0.8), 0 0 50px rgba(139, 92, 246, 0.5);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes orbitIcon {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    color: #8b5cf6;
+  }
+  50% {
+    color: #ec4899;
+  }
+  100% {
+    color: #8b5cf6;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.1);
+  }
+  50% {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+}
+
+/* Clases utilitarias animadas */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+.animate-orbit {
+  animation: orbitIcon 2s ease-in-out infinite;
+}
+
+.animate-color-shift {
+  animation: colorShift 3s ease-in-out infinite;
+}
+
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* Card hover mejorado */
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+  transform: translateY(0) scale(1);
+}
+
+.card-hover:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px var(--glow-color);
+}
+
+/* Bordes con efecto brillante */
+.border-glow {
+  @apply border;
+  position: relative;
+  overflow: hidden;
+  border-color: var(--accent-primary);
+}
+
+.border-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2.5s infinite;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Texto con glow */
+.text-glow {
+  color: var(--accent-primary);
+  text-shadow: 0 0 30px var(--glow-color);
+}
+
+/* Fondos gradientes mejorados */
+.bg-gradient-animated {
+  background: #1a1625;
+  @apply transition-all duration-300;
+}
+
+/* Tema oscuro - estilos específicos */
+section {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  @apply transition-all duration-300;
+}
+
+/* Tema oscuro - mejoras adicionales */
+.dark section,
+section {
+  position: relative;
+}
+
+/* Pseudo-elementos decorativos */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(167, 139, 250, 0.05) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Efectos de glow mejorados */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, var(--glow-color), transparent 70%);
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-effect:hover::after {
+  opacity: 1;
+}
+
+/* Transiciones suaves globales */
+* {
+  @apply transition-colors duration-300;
+}
+
+/* Mejoras para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Efectos oscuros oscuros */
+html:not(.light) {
+  color-scheme: dark;
+}
+
+html:not(.light) .hover\:bg-purple-500:hover {
+  background-color: rgba(139, 92, 246, 0.2);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+}
+
+/* Efecto de borde brillante */
+.border-glow {
+  @apply border border-purple-500;
+  position: relative;
+  overflow: hidden;
+}
+
+.border-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* Scroll smooth para toda la página */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+/* Mejora de tipografía */
+.text-glow {
+  color: rgb(168, 85, 247);
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+/* Fondo con gradiente sutil */
+.bg-gradient-animated {
+  background: #1a1625;
+  @apply transition-all duration-300;
+}
+
+/* Transiciones suaves */
+* {
+  @apply transition-colors duration-300;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+}
+
+/* Efecto de borde brillante */
+.border-glow {
+  @apply border border-purple-500;
+  position: relative;
+  overflow: hidden;
+}
+
+.border-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* Scroll smooth para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejora de tipografía */
+.text-glow {
+  color: rgb(168, 85, 247);
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+/* Fondo con gradiente sutil */
+.bg-gradient-animated {
+  background: #1a1625;
+  @apply transition-all duration-300;
 }
