@@ -29,7 +29,7 @@ const Experience = () => {
   return (
     <section
       id="experiencia"
-      className="relative min-h-screen flex items-center justify-center px-4 bg-black overflow-hidden py-20"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 bg-black overflow-hidden py-16"
     >
       {/* Efecto de círculos animados de fondo mejorado */}
       <div className="absolute top-1/3 -right-40 w-80 h-80 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow" />
@@ -46,7 +46,7 @@ const Experience = () => {
       <div className="relative z-20 w-full max-w-5xl mx-auto">
         {/* Título */}
         <div className="text-center mb-20 animate-slide-in-left">
-          <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-purple-400 mb-4 animate-gradient drop-shadow-lg">
+          <h3 className="text-4xl sm:text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4 animate-gradient drop-shadow-lg">
             Experiencia Laboral
           </h3>
           <p className="text-gray-400 text-lg">Mi trayectoria profesional</p>

@@ -12,7 +12,7 @@ import {
   SiAstro,
 } from "react-icons/si";
 
-import { TbBrandReactNative } from "react-icons/tb";
+import { TbBrandReactNative, TbBrandDocker } from "react-icons/tb";
 
 const skills = [
   { name: "TypeScript", icon: <SiTypescript size={40} /> },
@@ -34,7 +34,7 @@ const Skills = () => {
   return (
     <section
       id="habilidades"
-      className="relative min-h-screen flex items-center justify-center px-4 bg-black overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 bg-black overflow-hidden py-16"
     >
       {/* Efecto de círculos animados de fondo mejorado */}
       <div className="absolute top-1/4 -left-40 w-80 h-80 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow" />
@@ -49,7 +49,7 @@ const Skills = () => {
 
       {/* Contenido Skills */}
       <div className="relative z-20 w-full max-w-6xl mx-auto text-center py-16">
-        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-400 mb-4">
+        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4">
           Habilidades Técnicas
         </h3>
         <p className="text-gray-400 mb-16 text-lg font-semibold">Tecnologías que domino y utilizo en mis proyectos</p>

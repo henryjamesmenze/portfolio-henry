@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative h-screen flex items-center justify-center px-4 overflow-hidden bg-black"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 overflow-hidden bg-black py-16"
     >
       {/* Fondo animado con gradiente */}
       <div className="absolute inset-0 bg-gradient-animated opacity-30 z-0" />
@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="relative z-20 max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Texto - izquierda */}
         <div className="w-full md:w-3/5 text-white text-center md:text-left">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-400 mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent mb-4">
             Henry Mendoza
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-purple-300 font-semibold mb-6">
@@ -34,13 +34,13 @@ const Hero = () => {
           <div className="flex gap-4 flex-wrap justify-center md:justify-start">
             <a
               href="#proyectos"
-              className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-all duration-300"
+              className="inline-block bg-gradient-to-r from-purple-600 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-purple-600 hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
             >
               Ver Proyectos
             </a>
             <a
               href="#contacto"
-              className="inline-block border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
+              className="inline-block border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300 transform hover:scale-105"
             >
               Contactar
             </a>

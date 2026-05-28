@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const navItems = ["Inicio", "Sobre mí", "Habilidades", "Experiencia", "Proyectos", "Contacto"];
+  const navItems = ["Inicio", "Sobre mí", "Habilidades", "Experiencia", "Proyectos", "Certificaciones"];
 
   return (
     <nav className="fixed top-0 w-full bg-black/80 dark:bg-black/80 backdrop-blur-lg text-gray-100 dark:text-gray-100 shadow-lg shadow-purple-500/10 z-50 border-b border-purple-500/20 dark:border-purple-500/20">
@@ -46,9 +46,9 @@ const Navbar = () => {
             <a
               href="/_HJ_HenryZepeda.pdf"
               download='/_HJ_HenryZepeda.pdf'
-              className="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 block text-center"
+              className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 block text-center"
             >
-              Descargar CV
+              CV
             </a>
           </li>
         </ul>

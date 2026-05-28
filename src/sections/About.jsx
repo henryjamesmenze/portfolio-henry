@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="sobremí"
-      className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden bg-black"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 overflow-hidden bg-black py-16"
     >
       {/* Efecto de círculos animados de fondo mejorado */}
       <div className="absolute top-1/4 -right-40 w-80 h-80 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow" />
@@ -32,7 +32,7 @@ const About = () => {
 
         {/* Texto - 60% */}
         <div className="w-full md:w-3/5 text-white text-center md:text-left">
-          <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-400 mb-6">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-6">
             Sobre Mí
           </h3>
           <p className="text-base sm:text-lg md:text-lg text-gray-300 leading-relaxed mb-8 font-medium">

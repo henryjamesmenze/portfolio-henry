@@ -7,10 +7,11 @@
   --bg-primary: #1a1625;
   --bg-secondary: #2d2440;
   --bg-tertiary: #3d3555;
-  --text-primary: #e8e3f0;
-  --text-secondary: #c4b8d1;
+  --text-primary: #ffffff;
+  --text-secondary: #e8e3f0;
   --accent-primary: #a78bfa;
   --accent-secondary: #c084fc;
+  --accent-tertiary: #00d9ff;
   --border-color: rgba(167, 139, 250, 0.25);
   --border-hover: rgba(167, 139, 250, 0.5);
   --glow-color: rgba(167, 139, 250, 0.25);
