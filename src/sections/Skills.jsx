@@ -27,6 +27,7 @@ const skills = [
   { name: "Bash", icon: <SiGnubash size={40} /> },
   { name: "Astro", icon: <SiAstro size={40} /> },
   { name: "React Native", icon: <TbBrandReactNative size={40} /> },
+  { name: "Docker", icon: <TbBrandDocker size={40} /> },
 ];
 
 const Skills = () => {
@@ -47,8 +48,8 @@ const Skills = () => {
       <div className="absolute bottom-0 left-0 w-full h-24 bg-black/30 z-10" />
 
       {/* Contenido Skills */}
-      <div className="relative z-20 w-full max-w-6xl mx-auto text-center py-16 animate-slide-in-left">
-        <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-purple-400 mb-4 animate-gradient drop-shadow-lg">
+      <div className="relative z-20 w-full max-w-6xl mx-auto text-center py-16">
+        <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-400 mb-4">
           Habilidades Técnicas
         </h3>
         <p className="text-gray-400 mb-16 text-lg font-semibold">Tecnologías que domino y utilizo en mis proyectos</p>
@@ -64,11 +65,11 @@ const Skills = () => {
               <div className="absolute -inset-0.5 bg-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-lg" />
               
               {/* Card principal con fondo degradado */}
-              <div className="relative bg-black border-2 border-purple-500/40 rounded-xl p-8 flex flex-col items-center justify-center gap-4 hover:border-purple-400 transition-all duration-300 text-white group-hover:shadow-2xl group-hover:shadow-purple-500/40 hover:-rotate-1 hover:scale-105">
-                <div className="text-5xl text-purple-400 group-hover:text-pink-400 transition-all duration-300 group-hover:scale-150 group-hover:animate-orbit">
+              <div className="relative bg-black border border-purple-500/30 rounded-lg p-6 flex flex-col items-center justify-center gap-3 hover:border-purple-400 transition-all duration-300 text-white">
+                <div className="text-4xl text-purple-400 transition-all duration-300">
                   {skill.icon}
                 </div>
-                <span className="text-base sm:text-lg font-bold text-center text-purple-300 group-hover:text-purple-200 transition-all group-hover:animate-color-shift">{skill.name}</span>
+                <span className="text-sm sm:text-base font-semibold text-center text-purple-300">{skill.name}</span>
               </div>
             </div>
           ))}

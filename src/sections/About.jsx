@@ -18,28 +18,27 @@ const About = () => {
       {/* Contenido dividido */}
       <div className="relative z-20 max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-12 py-16">
         {/* Imagen - 40% */}
-        <div className="w-full md:w-2/5 flex justify-center animate-slide-in-left">
+        <div className="w-full md:w-2/5 flex justify-center">
           <div className="relative group">
             {/* Aura brillante animada */}
-            <div className="absolute inset-0 bg-purple-600 rounded-2xl blur-3xl opacity-60 group-hover:opacity-80 animate-pulse-slow transition-all duration-300" />
-            <div className="absolute inset-0 bg-purple-600 rounded-2xl blur-2xl opacity-40 animate-float" />
+            <div className="absolute inset-0 bg-purple-600 rounded-2xl blur-2xl opacity-30 transition-all duration-300" />
             <img
               src="/henryAbout.jpeg"
               alt="Foto de perfil"
-              className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 object-cover rounded-2xl border-4 border-purple-500 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-110 hover:border-pink-500 hover:-rotate-2"
+              className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 object-cover rounded-2xl border-4 border-purple-500 shadow-lg transition-all duration-300"
             />
           </div>
         </div>
 
         {/* Texto - 60% */}
-        <div className="w-full md:w-3/5 text-white text-center md:text-left animate-slide-in-right">
-          <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-purple-400 mb-6 animate-gradient drop-shadow-lg">
+        <div className="w-full md:w-3/5 text-white text-center md:text-left">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-400 mb-6">
             Sobre Mí
           </h3>
           <p className="text-base sm:text-lg md:text-lg text-gray-300 leading-relaxed mb-8 font-medium">
             Soy un desarrollador persistente y orientado a la excelencia técnica. Me especializo en crear experiencias web eficientes y profesionales. Me apasiona el minimalismo visual, la accesibilidad y la optimización de flujos de trabajo.
           </p>
-          <div className="bg-purple-900/30 border-2 border-purple-500/50 rounded-xl p-8 mb-8 hover:border-purple-400 transition-all duration-300 transform hover:scale-105">
+          <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-6 mb-8 hover:border-purple-400 transition-all duration-300">
             <p className="text-base sm:text-lg md:text-xl text-purple-300 leading-relaxed font-bold italic">
               "Mi filosofía se basa en no dejar de estudiar y aprender constantemente."
             </p>
@@ -55,7 +54,7 @@ const About = () => {
               <div className="text-3xl font-black text-purple-400">1+</div>
               <div className="text-xs sm:text-sm text-gray-300 font-semibold mt-1">Años</div>
             </div>
-            <div className="bg-purple-900/40 border-2 border-purple-500/50 rounded-xl p-5 hover:border-purple-400 hover:bg-purple-900/60 transition-all duration-300 transform hover:scale-110 col-span-2 md:col-span-1">
+            <div className="bg-purple-900/30 border border-purple-500/30 rounded-lg p-4 hover:border-purple-400 hover:bg-purple-900/40 transition-all duration-300 col-span-2 md:col-span-1">
               <div className="text-3xl font-black text-purple-400">100%</div>
               <div className="text-xs sm:text-sm text-gray-300 font-semibold mt-1">Dedicación</div>
             </div>

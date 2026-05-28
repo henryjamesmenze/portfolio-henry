@@ -62,8 +62,8 @@ const Projects = () => {
       <div className="absolute bottom-0 left-0 w-full h-24 bg-black/30 dark:bg-black/30 z-10" />
       
       <div className="relative z-20 max-w-5xl mx-auto text-white w-full">
-        <div className="text-center mb-16 animate-slide-in-left">
-          <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-purple-400 mb-4 animate-gradient drop-shadow-lg">
+        <div className="text-center mb-16">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-400 mb-4">
             Proyectos Destacados
           </h3>
           <p className="text-gray-300 text-lg font-semibold">Trabajos que demuestran mis habilidades y creatividad</p>
@@ -80,9 +80,9 @@ const Projects = () => {
               <div className="absolute -inset-0.5 bg-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 blur-xl" />
               
               {/* Card principal con diseño mejorado */}
-              <div className="relative bg-black/50 border-2 border-purple-500/50 rounded-xl p-8 h-full flex flex-col group-hover:border-purple-400 transition-all duration-300 hover:-rotate-1">
+              <div className="relative bg-black/50 border border-purple-500/40 rounded-lg p-6 h-full flex flex-col group-hover:border-purple-400 transition-all duration-300">
                 <div className="mb-4">
-                  <h4 className="text-xl sm:text-2xl font-bold mb-2 text-purple-300 group-hover:animate-color-shift">
+                  <h4 className="text-lg sm:text-xl font-semibold mb-2 text-purple-300">
                     {proj.title}
                   </h4>
                 </div>
@@ -102,7 +102,7 @@ const Projects = () => {
                 <div className="flex gap-4 pt-6 border-t border-purple-500/20">
                   <a
                     href={proj.demo}
-                    className="flex-1 text-center py-2 px-4 bg-purple-600 text-white rounded-lg font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all transform hover:scale-105 text-sm"
+                    className="flex-1 text-center py-2 px-4 bg-purple-600 text-white rounded-md font-semibold hover:bg-purple-700 transition-all text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -111,7 +111,7 @@ const Projects = () => {
                   {proj.repo !== "#" && (
                     <a 
                       href={proj.repo} 
-                      className="flex-1 text-center py-2 px-4 border-2 border-purple-500/50 text-purple-300 rounded-lg font-bold hover:bg-purple-500/20 transition-all transform hover:scale-105 text-sm"
+                      className="flex-1 text-center py-2 px-4 border border-purple-500/50 text-purple-300 rounded-md font-semibold hover:bg-purple-500/10 transition-all text-sm"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
